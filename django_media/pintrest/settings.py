@@ -118,6 +118,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
 STATIC_URL = 'static/'
+STATIC_ROOT = BASE_DIR / 'static'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
@@ -125,5 +126,20 @@ STATIC_URL = 'static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # Media files
-MEDIA_URL = '/media/'
-MEDIA_ROOT = BASE_DIR / 'media'
+# MEDIA_URL = '/media/'
+# MEDIA_ROOT = BASE_DIR / 'media'
+
+
+
+# settings.py
+
+# Azure Blob Storage settings
+AZURE_ACCOUNT_NAME = 'sabari8956'
+AZURE_ACCOUNT_KEY = 'ZmPxaIX5I+s/QTsgofG2OUT7s0A/tA+W0mbm/pvA3AbMnkO6k5bcB2sNp/7oJ4FxYGtt+lvHwlSv+AStKqUWSA=='
+AZURE_CONTAINER = 'djangomedia'
+
+# Use Azure Blob Storage for media files
+DEFAULT_FILE_STORAGE = 'storages.backends.azure_storage.AzureStorage'
+AZURE_CUSTOM_DOMAIN = f'{AZURE_ACCOUNT_NAME}.blob.core.windows.net'
+MEDIA_URL = f'https://{AZURE_CUSTOM_DOMAIN}/{AZURE_CONTAINER}/'
+# MEDIA_ROOT = BASE_DIR / 'media'
