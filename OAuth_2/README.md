@@ -15,3 +15,5 @@ Activate the env
 
 ### Install packages
 `pip install -r .\requirements.txt`
+
+## Start Django project
