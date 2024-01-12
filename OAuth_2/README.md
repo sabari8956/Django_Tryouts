@@ -17,3 +17,7 @@ Activate the env
 `pip install -r .\requirements.txt`
 
 ## Start Django project
+`django-admin startproject OAuth .`
+
+Add Needed configs
+Download GCP api JSON [google cloud platform]
