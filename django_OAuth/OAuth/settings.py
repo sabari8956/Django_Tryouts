@@ -151,3 +151,8 @@ AUTHENTICATION_BACKENDS = (
 
 LOGIN_REDIRECT_URL = '/'
 LOGOUT_REDIRECT_URL = '/'
+
+ACCOUNT_FORMS = {
+    'signup': 'website.forms.MyCustomSignupForm',
+    'login': 'website.forms.MyCustomLoginForm',
+}

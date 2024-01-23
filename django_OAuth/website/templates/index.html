@@ -12,6 +12,10 @@
     {% else %}
         <h1>Sign in</h1>
     {% endif %}
-    <a href="{% provider_login_url 'google' %}?next=/">Signin with google</a>
+
+    <form action="{% provider_login_url 'google' %}" method="post">
+    {% csrf_token %}
+    <button type="submit">SIGN IN WITH GOOGLE</button>
+    </form>
 </body>
 </html>

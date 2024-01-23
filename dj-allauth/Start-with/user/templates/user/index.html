@@ -1,3 +1,5 @@
+{% load socialaccount %}
+
 <!DOCTYPE html>
 
 <head>
@@ -6,8 +8,8 @@
 </head>
 
 <body>
-
-    <button><a href="#">Google Login</a></button>
+{{ user }}
+    <button><a href="https://accounts.google.com/o/oauth2/v2/auth/oauthchooseaccount?client_id=286410038003-1o45q8nkk27gpg5vn4ehrt80tht8dru1.apps.googleusercontent.com&redirect_uri=http%3A%2F%2F127.0.0.1%3A8000%2Faccounts%2Fgoogle%2Flogin%2Fcallback%2F&scope=profile&response_type=code&state=ep3egc30cjK5vq3A&service=lso&o2v=2&theme=glif&flowName=GeneralOAuthFlow">Google Login</a></button>
     <button><a href="#">Facebook Login</a></button>
 </body>
 
